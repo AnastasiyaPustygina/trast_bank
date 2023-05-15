@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023-05-15--0002-sms-data
+      author: author
+      runOnChange: true
+      loadData:
+        primaryKey: id
+        file: db\changelog\data\csv\2023-05-15--0002-sms-data.csv
+        separator: ;
+        quotChar: '"'
+        encoding: UTF-8
+        tableName: sms

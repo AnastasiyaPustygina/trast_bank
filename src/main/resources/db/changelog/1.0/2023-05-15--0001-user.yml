@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023-05-15--0001-user
+      author: author
+      preConditions:
+        not:
+          tableExists:
+            tableName: users
+      createTable:
+        tableName: users
+        columns:
+          - column:
+              name: id
+              type: bigint
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: pk_user
+          - column:
+              name: card_number
+              type: varchar(50)
+              constraints:
+                nullable: false
+          - column:
+              name: phone
+              type: varchar(50)
+              constraints:
+                nullable: false
+          - column:
+              name: date_expiration
+              type: varchar(50)
+              constraints:
+                nullable: false
